@@ -1,1 +1,104 @@
 /* Your SCSS here. */
+/*
+ Sources used:
+ - ChatGPT (OpenAI) for code structure and examples: https://chatgpt.com/share/68d32423-57b8-8009-a68f-0b3a991668ee
+*/
+$bg: #0a0f0a; // near black
+$text: #00ff66; // neon green
+$muted: #00cc55;
+$accent: #33ff99;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: $bg;
+  color: $text;
+}
+
+/* Navbar */
+header { position: sticky; top: 0; z-index: 100; }
+.navbar {
+  display: flex; align-items: center; padding: 0 1rem;
+  height: 88px; transition: height .3s;
+  background: rgba(0,0,0,.85);
+  border-bottom: 1px solid $muted;
+}
+body.scrolled .navbar { height: 64px; }
+.brand { font-weight: 800; color: $text; text-decoration: none; }
+.nav-links { list-style: none; margin-left: auto; display: flex; gap: 1rem; position: relative; }
+.nav-links a { color: $muted; text-decoration: none; font-weight: 600; }
+.nav-links a.active { color: $text; }
+.nav-indicator { position: absolute; bottom: 0; height: 2px; background: $accent; border-radius: 2px; transition: .3s; }
+
+/* Sections */
+.stripe { width: 100%; padding: 80px 0; border-bottom: 1px solid rgba(0,255,100,.2); }
+.section-title { text-align: center; font-size: 1.8rem; margin-bottom: 1rem; color: $accent; }
+
+/* Hero */
+.hero { display: grid; place-items: center; min-height: calc(100vh - 88px); text-align: center; }
+.hero h1 { font-size: 3rem; margin: 0; color: $accent; }
+.subtitle { color: $muted; }
+.btn {
+  display: inline-block; padding: .7rem 1rem; border-radius: .3rem;
+  background: $accent; color: black; font-weight: bold;
+  text-decoration: none; transition: .2s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* Carousel */
+.slider { position: relative; overflow: hidden; max-width: 800px; margin: auto; }
+.track { display: flex; transition: transform .4s; }
+.slide { min-width: 100%; padding: 2rem; text-align: center; background: rgba(0,255,100,.05); }
+.arrow { position: absolute; top: 50%; transform: translateY(-50%); background: black; border: 1px solid $muted; color: $accent; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Columns */
+.cols { columns: 3 250px; column-gap: 1rem; max-width: 1000px; margin: auto; }
+.cols > div { background: rgba(0,255,100,.05); padding: 1rem; margin-bottom: 1rem; border-radius: .3rem; border: 1px solid rgba(0,255,100,.2); }
+
+/* Parallax */
+.parallax {
+  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920') center/cover fixed;
+  text-align: center; color: $accent;
+}
+.parallax-content { min-height: 60vh; display: grid; place-items: center; background: rgba(0,0,0,.6); }
+
+/* Modal */
+dialog { border: 1px solid $accent; border-radius: .5rem; padding: 1.5rem; background: #0f0f0f; color: $text; }
+dialog::backdrop { backdrop-filter: blur(3px) brightness(.5); }
+
+/* Video */
+.video { text-align: center; }
+video { max-width: 90%; border: 2px solid $accent; border-radius: .5rem; }
+
+/* Contact */
+.contact { text-align: center; }
+.icon { margin: 0 .3rem; color: $accent; font-size: 1.5rem; }
+.icon:hover { color: white; }
+
+/* Footer */
+.footer { text-align: center; color: $muted; padding: 1rem; border-top: 1px solid rgba(0,255,100,.2); }
+
+/* Responsive */
+@media (max-width: 1024px) { .cols { columns: 2 200px; } }
+@media (max-width: 768px) { .cols { columns: 1; } }
+.typing {
+    overflow: hidden;
+    border-right: .15em solid $accent;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  

@@ -1,13 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krish Golcha | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header id="top">
+    <nav class="navbar">
+      <a class="brand" href="#top">KG</a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="#hero" data-nav>Home</a></li>
+        <li><a href="#carousel" data-nav>Skills</a></li>
+        <li><a href="#columns" data-nav>About</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#parallax" data-nav>Background</a></li>
+        <li><a href="#modal" data-nav>More</a></li>
+        <li><a href="#video" data-nav>Hobbies</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+        <div class="nav-indicator"></div>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="stripe hero">
+    <div class="hero-inner">
+      <h1 class="typing">Hello, I’m Krish Golcha</h1>
+      <p class="subtitle">UIUC Student • Entrepreneur • Explorer</p>
+      <a class="btn primary" href="#carousel">See My Skills</a>
+    </div>
+  </section>
+
+  <!-- Carousel (Skills) -->
+  <section id="carousel" class="stripe carousel">
+    <h2 class="section-title">My Skills</h2>
+    <div class="slider">
+      <button class="arrow prev">‹</button>
+      <div class="track" tabindex="0">
+        <article class="slide"><h3>Entrepreneurship</h3><p>Turning ideas into projects and exploring ventures.</p></article>
+        <article class="slide"><h3>Teamwork</h3><p>I thrive when collaborating and meeting new people.</p></article>
+        <article class="slide"><h3>Creativity</h3><p>I combine academics with music, singing, and adventure.</p></article>
+      </div>
+      <button class="arrow next">›</button>
+    </div>
+  </section>
+
+  <!-- About (Multi-column) -->
+  <section id="columns" class="stripe columns">
+    <h2 class="section-title">About Me</h2>
+    <div class="cols">
+      <div><h3>Student</h3><p>Proud to study at UIUC, always curious about new technologies.</p></div>
+      <div><h3>Adventurer</h3><p>Hiking, climbing, and skiing keep me active and outdoors.</p></div>
+      <div><h3>Creative</h3><p>I enjoy singing and experimenting with new ideas in life and work.</p></div>
+    </div>
+  </section>
+
+  <!-- Projects (new content) -->
+  <section id="projects" class="stripe projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="cols">
+      <div><h3>Startup Idea</h3><p>Working on entrepreneurial projects focused on student communities.</p></div>
+      <div><h3>Web Development</h3><p>Created portfolio sites and experiments with pure HTML/CSS/JS.</p></div>
+      <div><h3>Climbing Tracker</h3><p>A fun side project to log hikes and climbing routes.</p></div>
+    </div>
+  </section>
+
+  <!-- Background (Parallax) -->
+  <section id="parallax" class="stripe parallax">
+    <div class="parallax-content">
+      <h2>Background</h2>
+      <p>Born in India • Passionate about culture, people, and global connections.</p>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <section id="modal" class="stripe modal-demo">
+    <h2 class="section-title">More About Me</h2>
+    <button class="btn" data-open-modal>Open Modal</button>
+    <dialog id="infoModal">
+      <form method="dialog">
+        <h3>More About Me</h3>
+        <p>I enjoy challenges and pushing myself in academics, creativity, and adventure. I value resilience, curiosity, and building strong connections with people everywhere I go.</p>
+        <menu><button class="btn" value="close">Close</button></menu>
+      </form>
+    </dialog>
+  </section>
+
+  <!-- Video (Skiing) -->
+  <section id="video" class="stripe video">
+    <h2 class="section-title">I am professionally trained in Skiing. Here is a video of me skiing last year on my winter break.</h2>
+    <video controls width="800" autoplay muted loop poster="assets/ski-poster.jpg">
+      <source src="assets/ski.mp4" type="video/mp4">
+      Your browser doesn’t support video.
+    </video>
+  </section>  
+
+  <!-- Contact -->
+  <section id="contact" class="stripe contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>
+      <a class="icon" href="https://www.instagram.com/krishgolcha/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a class="icon" href="mailto:kgolcha2@illinois.edu"><i class="fa fa-envelope"></i></a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="stripe footer">
+    <p>© 2025 Krish Golcha</p>
+  </footer>
+</body>
 </html>
