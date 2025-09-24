@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "CS498RK MP1",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
   },
   "author": "UIUC Web Programming Staff",
   "license": "ISC",
